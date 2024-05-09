@@ -1,42 +1,90 @@
 [
 	{
-		"file": "/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/Source/ProCoding/MyCharacter.cpp",
+		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\JAMIELOOKPLEASE.cpp",
 		"arguments": [
-			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
-			"@/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/.vscode/compileCommands_ProCoding/ProCoding.1.rsp"
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
 		],
-		"directory": "/Users/Shared/UE_5.3/Engine/Source"
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
 	},
 	{
-		"file": "/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/Source/ProCoding/MyCharacter.h",
+		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\JAMIELOOKPLEASE.h",
 		"arguments": [
-			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
-			"@/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/.vscode/compileCommands_ProCoding/ProCoding.1.rsp"
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
 		],
-		"directory": "/Users/Shared/UE_5.3/Engine/Source"
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
 	},
 	{
-		"file": "/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/Source/ProCoding/ProCoding.Build.cs",
+		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\MyCharacter.cpp",
 		"arguments": [
-			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
-			"@/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/.vscode/compileCommands_ProCoding/ProCoding.1.rsp"
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
 		],
-		"directory": "/Users/Shared/UE_5.3/Engine/Source"
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
 	},
 	{
-		"file": "/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/Source/ProCoding/ProCoding.cpp",
+		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\MyCharacter.h",
 		"arguments": [
-			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
-			"@/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/.vscode/compileCommands_ProCoding/ProCoding.1.rsp"
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
 		],
-		"directory": "/Users/Shared/UE_5.3/Engine/Source"
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
 	},
 	{
-		"file": "/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/Source/ProCoding/ProCoding.h",
+		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\Private\\Character2.cpp",
 		"arguments": [
-			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
-			"@/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/.vscode/compileCommands_ProCoding/ProCoding.1.rsp"
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
 		],
-		"directory": "/Users/Shared/UE_5.3/Engine/Source"
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\Private\\jamiepleaselookatthis.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\ProCoding.Build.cs",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\ProCoding.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\ProCoding.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\Public\\Character2.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\Public\\jamiepleaselookatthis.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
 	}
 ]
