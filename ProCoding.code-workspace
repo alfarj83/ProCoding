@@ -1,0 +1,852 @@
+{
+	"folders": [
+		{
+			"name": "ProCoding",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/Users/Shared/UE_5.3"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp",
+			"vadimcn.vscode-lldb",
+			"ms-vscode.mono-debug",
+			"dfarley1.file-picker"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "ProCoding Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"Mac",
+					"Debug",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"Mac",
+					"Debug",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProCoding Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"Mac",
+					"Debug",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"Mac",
+					"DebugGame",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"Mac",
+					"DebugGame",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProCoding Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"Mac",
+					"DebugGame",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"Mac",
+					"Development",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"Mac",
+					"Development",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProCoding Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"Mac",
+					"Development",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding Mac Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"Mac",
+					"Test",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding Mac Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"Mac",
+					"Test",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProCoding Mac Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding Mac Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"Mac",
+					"Test",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding Mac Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"Mac",
+					"Shipping",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding Mac Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"Mac",
+					"Shipping",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProCoding Mac Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding Mac Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"Mac",
+					"Shipping",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding IOS Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"IOS",
+					"Debug",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding IOS Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"IOS",
+					"Debug",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProCoding IOS Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding IOS Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"IOS",
+					"Debug",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding IOS DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"IOS",
+					"DebugGame",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding IOS DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"IOS",
+					"DebugGame",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProCoding IOS DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding IOS DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"IOS",
+					"DebugGame",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding IOS Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"IOS",
+					"Development",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding IOS Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"IOS",
+					"Development",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProCoding IOS Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding IOS Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"IOS",
+					"Development",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding IOS Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"IOS",
+					"Test",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding IOS Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"IOS",
+					"Test",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProCoding IOS Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding IOS Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"IOS",
+					"Test",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding IOS Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"IOS",
+					"Shipping",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding IOS Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"IOS",
+					"Shipping",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProCoding IOS Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCoding IOS Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCoding",
+					"IOS",
+					"Shipping",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCodingEditor Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCodingEditor",
+					"Mac",
+					"Debug",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCodingEditor Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCodingEditor",
+					"Mac",
+					"Debug",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProCodingEditor Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCodingEditor Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCodingEditor",
+					"Mac",
+					"Debug",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCodingEditor Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCodingEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCodingEditor Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCodingEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProCodingEditor Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCodingEditor Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCodingEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCodingEditor Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCodingEditor",
+					"Mac",
+					"Development",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCodingEditor Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCodingEditor",
+					"Mac",
+					"Development",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"ProCodingEditor Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			},
+			{
+				"label": "ProCodingEditor Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ProCodingEditor",
+					"Mac",
+					"Development",
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/UE_5.3"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch ProCoding (Debug)",
+				"request": "launch",
+				"program": "/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/Binaries/Mac/UnrealGame-Mac-Debug.app/Contents/MacOS/UnrealGame-Mac-Debug",
+				"preLaunchTask": "ProCoding Mac Debug Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch ProCoding (DebugGame)",
+				"request": "launch",
+				"program": "/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/Binaries/Mac/UnrealGame-Mac-DebugGame.app/Contents/MacOS/UnrealGame-Mac-DebugGame",
+				"preLaunchTask": "ProCoding Mac DebugGame Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch ProCoding (Development)",
+				"request": "launch",
+				"program": "/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/Binaries/Mac/UnrealGame.app/Contents/MacOS/UnrealGame",
+				"preLaunchTask": "ProCoding Mac Development Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch ProCoding (Test)",
+				"request": "launch",
+				"program": "/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/Binaries/Mac/UnrealGame-Mac-Test.app/Contents/MacOS/UnrealGame-Mac-Test",
+				"preLaunchTask": "ProCoding Mac Test Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch ProCoding (Shipping)",
+				"request": "launch",
+				"program": "/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/Binaries/Mac/UnrealGame-Mac-Shipping.app/Contents/MacOS/UnrealGame-Mac-Shipping",
+				"preLaunchTask": "ProCoding Mac Shipping Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch ProCodingEditor (Debug)",
+				"request": "launch",
+				"program": "/Users/Shared/UE_5.3/Engine/Binaries/Mac/UnrealEditor-Mac-Debug.app/Contents/MacOS/UnrealEditor-Mac-Debug",
+				"preLaunchTask": "ProCodingEditor Mac Debug Build",
+				"args": [
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject"
+				],
+				"cwd": "/Users/Shared/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch ProCodingEditor (DebugGame)",
+				"request": "launch",
+				"program": "/Users/Shared/UE_5.3/Engine/Binaries/Mac/UnrealEditor-Mac-DebugGame.app/Contents/MacOS/UnrealEditor-Mac-DebugGame",
+				"preLaunchTask": "ProCodingEditor Mac DebugGame Build",
+				"args": [
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject"
+				],
+				"cwd": "/Users/Shared/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch ProCodingEditor (Development)",
+				"request": "launch",
+				"program": "/Users/Shared/UE_5.3/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
+				"preLaunchTask": "ProCodingEditor Mac Development Build",
+				"args": [
+					"/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject"
+				],
+				"cwd": "/Users/Shared/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Mac Development Build",
+				"program": "/Users/Shared/UE_5.3/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/ProCoding.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/Users/Shared/UE_5.3"
+			}
+		]
+	}
+}
