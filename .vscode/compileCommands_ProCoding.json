@@ -1,0 +1,42 @@
+[
+	{
+		"file": "/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/Source/ProCoding/MyCharacter.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/.vscode/compileCommands_ProCoding/ProCoding.1.rsp"
+		],
+		"directory": "/Users/Shared/UE_5.3/Engine/Source"
+	},
+	{
+		"file": "/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/Source/ProCoding/MyCharacter.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/.vscode/compileCommands_ProCoding/ProCoding.1.rsp"
+		],
+		"directory": "/Users/Shared/UE_5.3/Engine/Source"
+	},
+	{
+		"file": "/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/Source/ProCoding/ProCoding.Build.cs",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/.vscode/compileCommands_ProCoding/ProCoding.1.rsp"
+		],
+		"directory": "/Users/Shared/UE_5.3/Engine/Source"
+	},
+	{
+		"file": "/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/Source/ProCoding/ProCoding.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/.vscode/compileCommands_ProCoding/ProCoding.1.rsp"
+		],
+		"directory": "/Users/Shared/UE_5.3/Engine/Source"
+	},
+	{
+		"file": "/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/Source/ProCoding/ProCoding.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/jamiealfaro/Documents/Unreal Projects/ProCoding/.vscode/compileCommands_ProCoding/ProCoding.1.rsp"
+		],
+		"directory": "/Users/Shared/UE_5.3/Engine/Source"
+	}
+]
