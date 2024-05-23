@@ -1,21 +1,5 @@
 [
 	{
-		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\JAMIELOOKPLEASE.cpp",
-		"arguments": [
-			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
-			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
-		],
-		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
-	},
-	{
-		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\JAMIELOOKPLEASE.h",
-		"arguments": [
-			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
-			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
-		],
-		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
-	},
-	{
 		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\MyCharacter.cpp",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
@@ -32,6 +16,14 @@
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
 	},
 	{
+		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\Private\\CPPCharacterVersion.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
 		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\Private\\Character2.cpp",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
@@ -40,7 +32,31 @@
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\Private\\jamiepleaselookatthis.cpp",
+		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\Private\\MouseControlComponent.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\Private\\MoveComponent.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\Private\\idiota.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\Private\\test.cpp",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
 			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
@@ -72,6 +88,14 @@
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
 	},
 	{
+		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\Public\\CPPCharacterVersion.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
 		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\Public\\Character2.h",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
@@ -80,7 +104,31 @@
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\Public\\jamiepleaselookatthis.h",
+		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\Public\\MouseControlComponent.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\Public\\MoveComponent.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\Public\\idiota.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\Source\\ProCoding\\Public\\test.h",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
 			"@C:\\Users\\kyleg\\Documents\\Unreal Projects\\ProCoding\\.vscode\\compileCommands_ProCoding\\ProCoding.1.rsp"
