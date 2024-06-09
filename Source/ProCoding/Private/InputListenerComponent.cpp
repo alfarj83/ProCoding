@@ -22,16 +22,21 @@ void UInputListenerComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//Finds the character we need
+	//Finds the character reference we need from the Owner the component is located in
 	CharacterRef = Cast<ACharacter>(GetOwner());
 
+	//Finds the controller reference using the Character Reference, which already contains a pointer/reference to the controller, named just Controller.
 	APlayerController* ControllerRef = Cast<APlayerController>(CharacterRef->Controller); 
 
+	/*	THIS CODE IS ALREADY ACCOMPLISHED IN THE CONTROLLER BLUEPRINT, SO UNNECESSARY.
 	if (ControllerRef){
+		//Accesses the ULocalPlayer Subsystem, sets it equal to the variable Subsystem, and sees if its NOT NULL, so its a null check.
 		if(UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(ControllerRef->GetLocalPlayer())) {
-			Subsystem->AddMappingContext(InputMapping, 0);
+			Subsystem->AddMappingContext(InputMapping, 0);	//this actually accomplishes what the Controller Blueprint already does.
 		}
 	}
+	*/
+
 }
 void UInputListenerComponent::Dog(){
 	GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, "What the dog doing doe");
