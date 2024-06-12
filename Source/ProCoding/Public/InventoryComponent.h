@@ -29,10 +29,11 @@ public:
 	TArray<AItemParentClass*> InventoryArray;
 	
 	int CurrentItem = 0;
-
+	bool isEmpty = true;
 	void CycleThroughInvetory();
 
 	UFUNCTION(BlueprintCallable)
 	void AddItem(class AItemParentClass* Item);
-
+	UFUNCTION(BlueprintCallable)
+	TArray<AItemParentClass*> ReturnInventory();
 };

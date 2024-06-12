@@ -17,11 +17,12 @@ void UInventoryComponent::CycleThroughInvetory(){
 
 }
 void UInventoryComponent::AddItem(class AItemParentClass* Item) {
-
+	isEmpty = false;
 	InventoryArray.Add(Item);
-
 }
-
+TArray<AItemParentClass*> UInventoryComponent::ReturnInventory(){
+	return InventoryArray;
+}
 // Called when the game starts
 void UInventoryComponent::BeginPlay()
 {
@@ -30,13 +31,12 @@ void UInventoryComponent::BeginPlay()
 	// ...
 	
 }
-
-
 // Called every frame
 void UInventoryComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+	if(InventoryArray.Num() == 0) isEmpty = true;
 	// ...
 }
 
