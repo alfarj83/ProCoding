@@ -37,6 +37,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 	bool IsPlayerNear();
 
+	UFUNCTION(BlueprintCallable)
+	class APlayerParentClass* ReturnCharacterReference();
+
 	UPROPERTY(BlueprintReadOnly)
 	bool IsNear = false;
 

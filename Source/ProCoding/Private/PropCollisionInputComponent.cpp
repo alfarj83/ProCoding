@@ -17,6 +17,9 @@ void UPropCollisionInputComponent::SetCollisionReference(UPrimitiveComponent* Ob
 		CollisionObject->OnComponentEndOverlap.AddDynamic(this, &UPropCollisionInputComponent::EndOverlap);
 	}
 }
+class APlayerParentClass* UPropCollisionInputComponent::ReturnCharacterReference(){
+	return CharacterNear;
+}
 bool UPropCollisionInputComponent::IsPlayerNear(){
 	return IsNear;
 }
