@@ -5,8 +5,9 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "ItemParentClass.h"
-#include "InputActionValue.h"
 #include "EnhancedInputComponent.h"
+#include "Components/SkeletalMeshComponent.h"
+#include "GameFramework/SpringArmComponent.h"
 #include "PlayerParentClass.generated.h"
 
 UCLASS()
@@ -22,9 +23,15 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	FVector2D MovementVector{0.0f, 0.0f};
 	void ReadInputValues(const FInputActionInstance& Instance);
+	void CycleThroughInvetory();
+
 	bool IsPressed = false;
+	int CurrentItem = 0;
+	bool isEmpty = true;
+
+	USkeletalMeshComponent* HandMesh;
+	USpringArmComponent* SpringComponent;
 
 public:	
 	// Called every frame
@@ -33,23 +40,25 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	UPROPERTY(EditAnywhere, Category = "EnhancedInput")
-	class UInputAction* MovementButtons;
+	//The Array that represents references to each item
+	UPROPERTY(BlueprintReadOnly)
+	TArray<AItemParentClass*> InventoryArray;
 	
 	UPROPERTY(BlueprintReadOnly)
-	float ScaleFactor = 0.11f;
-
-	UFUNCTION(BlueprintCallable)
-	FVector2D ReturnScaleFactor();
-
-	UPROPERTY(EditAnywhere)
-	float ScaleAdditive = 0.11f;
+	FVector HandSocketLocation;
 
 	UPROPERTY(BlueprintReadOnly)
-	FVector2D ScaleFactorVector{0.0f, 0.0f};
+	FRotator HandSocketRotation;
+
+	//Function that allows you to add an item to the array
+	UFUNCTION(BlueprintCallable)
+	void AddItem(class AItemParentClass* Item);
+
+	UFUNCTION(BlueprintCallable)
+	TArray<AItemParentClass*> ReturnInventory();
+	
+	FVector2D ScaleValueVector{ 0.0f, 0.0f };
 
 	//Can be possibly be referenced by components that require player input
 	UEnhancedInputComponent* Input;
-
-
 };

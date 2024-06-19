@@ -41,11 +41,13 @@ public:
 	class APlayerParentClass* ReturnCharacterReference();
 
 	UPROPERTY(BlueprintReadOnly)
+	class APlayerParentClass* CharacterNear;
+
+	UPROPERTY(BlueprintReadOnly)
 	bool IsNear = false;
 
 	UPrimitiveComponent* CollisionObject;
 
-	UPROPERTY(BlueprintReadOnly)
-	class APlayerParentClass* CharacterNear;
+	
 
 };	
