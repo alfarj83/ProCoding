@@ -9,60 +9,44 @@ APlayerParentClass::APlayerParentClass()
 
 }
 
-//Not used for anything in particular, but could still be useful.
-void APlayerParentClass::ReadInputValues(const FInputActionInstance& Instance) {
-	ScaleValueVector = Instance.GetValue().Get<FVector2D>();
-	IsPressed = true;
-}
-
-void APlayerParentClass::CycleThroughInvetory(){
-
-
-
-}
-
-void APlayerParentClass::AddItem(class AItemParentClass* Item) {
-	isEmpty = false;
-	InventoryArray[0] = Item;
-}
-
-TArray<AItemParentClass*> APlayerParentClass::ReturnInventory(){
-	return InventoryArray;
-}
-
 void APlayerParentClass::BeginPlay()
 {
 	Super::BeginPlay();
-	InventoryArray.Init(nullptr, 1); //Populate Inventory Array with a null pointer to avoid error when trying to reference array before anything added.
+	//InventoryArray.Init(nullptr, 0); //Populate Inventory Array with a null pointer to avoid error when trying to reference array before anything added.
 	HandMesh = Cast<USkeletalMeshComponent>(FindComponentByTag(USkeletalMeshComponent::StaticClass(), TEXT("HandTag")));
+	BicepMesh = Cast<USkeletalMeshComponent>(FindComponentByTag(USkeletalMeshComponent::StaticClass(), TEXT("BicepTag")));
 	SpringComponent = Cast<USpringArmComponent>(FindComponentByTag(USpringArmComponent::StaticClass(), TEXT("CameraSpring")));
 
 }
-
+void APlayerParentClass::SetCurrentItem(AItemParentClass* Item) {
+	ItemInHand = Item;
+}
 void APlayerParentClass::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	if (HandMesh) {
 		HandSocketLocation = HandMesh->GetSocketLocation("HandSocket");
-		HandSocketRotation = SpringComponent->GetComponentRotation();
+		HandSocketRotation = HandMesh->GetSocketRotation("HandSocket");	//THIS IS A FIRST PERSON EXCLUSIVE THING, WONT WORK WITH THIRD PERSON
 			
-		if (InventoryArray[CurrentItem]) {
+		if (ItemInHand) {
+			ItemInHand->SetActorLocationAndRotation(HandSocketLocation, HandSocketRotation, false, 0, ETeleportType::None);
+		}
+	}
+	if (BicepMesh) {
+		BicepSocketLocation = BicepMesh->GetSocketLocation("BicepSocket");
+		BicepSocketRotation = BicepMesh->GetSocketRotation("BicepSocket");
 
-			InventoryArray[CurrentItem]->SetActorLocationAndRotation(HandSocketLocation, HandSocketRotation, false, 0, ETeleportType::None);
+		if (ItemInHand) {
+
+			ItemInHand->SetActorLocationAndRotation(HandSocketLocation, HandSocketRotation, false, 0, ETeleportType::None);
 
 		}
 	}
-	
-
-
 }
-
 // Called to bind functionality to input
 void APlayerParentClass::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-	Input = CastChecked<UEnhancedInputComponent>(PlayerInputComponent);
 	/*
 	if (Input) {
 		Input->BindAction(MovementButtons, ETriggerEvent::Triggered, this, &APlayerParentClass::ReadInputValues);

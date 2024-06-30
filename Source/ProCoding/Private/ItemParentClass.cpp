@@ -25,10 +25,3 @@ void AItemParentClass::Tick(float DeltaTime)
 
 }
 
-// Called to bind functionality to input
-void AItemParentClass::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-}
-
