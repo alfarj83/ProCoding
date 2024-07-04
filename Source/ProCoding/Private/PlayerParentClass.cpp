@@ -20,16 +20,19 @@ void APlayerParentClass::BeginPlay()
 }
 void APlayerParentClass::SetCurrentItem(AItemParentClass* Item) {
 	ItemInHand = Item;
+	ItemInHand->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	ItemInHand->AttachToComponent(HandMesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, FName("HandSocket"));
 }
 void APlayerParentClass::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	/*
 	if (HandMesh) {
 		HandSocketLocation = HandMesh->GetSocketLocation("HandSocket");
 		HandSocketRotation = HandMesh->GetSocketRotation("HandSocket");	//THIS IS A FIRST PERSON EXCLUSIVE THING, WONT WORK WITH THIRD PERSON
 			
 		if (ItemInHand) {
-			ItemInHand->SetActorLocationAndRotation(HandSocketLocation, HandSocketRotation, false, 0, ETeleportType::None);
+			//ItemInHand->SetActorLocationAndRotation(HandSocketLocation, HandSocketRotation, false, 0, ETeleportType::None);
 		}
 	}
 	if (BicepMesh) {
@@ -38,10 +41,11 @@ void APlayerParentClass::Tick(float DeltaTime)
 
 		if (ItemInHand) {
 
-			ItemInHand->SetActorLocationAndRotation(HandSocketLocation, HandSocketRotation, false, 0, ETeleportType::None);
+			//ItemInHand->SetActorLocationAndRotation(BicepSocketLocation, BicepSocketRotation, false, 0, ETeleportType::None);
 
 		}
 	}
+	*/
 }
 // Called to bind functionality to input
 void APlayerParentClass::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)

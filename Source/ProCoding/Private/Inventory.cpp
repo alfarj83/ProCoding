@@ -29,10 +29,23 @@ void UInventory::ToggleInventoryMenu() {
 }
 
 void UInventory::ChangeInventoryItem(int32 Key) {
-	if(Inventory.Num() > Key && Key >= 0) { //Each item has a specific key
+	if((Inventory.Num() > Key && Key >= 0) && CurrentItemIndex != Key && Inventory[Key]) { //Can be tied to numbers, operated based on array placement [0], [1], etcetera
 		if (Player) {
+			//Either it attaches to the backpack, or just gets disabled and is invisible (Only happens when backpack is not added).
+			Inventory[CurrentItemIndex]->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+			if (Backpack){
+				Inventory[CurrentItemIndex]->AttachToActor(Backpack, FAttachmentTransformRules::SnapToTargetNotIncludingScale, Inventory[CurrentItemIndex]->ReturnDesignatedSocket());
+			}
+			else {
+				Inventory[CurrentItemIndex]->SetActorTickEnabled(false);	//Disables previous item;
+				Inventory[CurrentItemIndex]->SetActorHiddenInGame(true);
+
+				Inventory[Key]->SetActorTickEnabled(true);	//Re-Enables new item;
+				Inventory[Key]->SetActorHiddenInGame(false);
+			}
+			Inventory[CurrentItemIndex]->ItemIsActive = false;
 			CurrentItemIndex = Key;
-			APlayerParentClass* PlayerReference = Cast<APlayerParentClass>(Player);
+			Inventory[Key]->ItemIsActive = true;
 			PlayerReference->SetCurrentItem(Inventory[Key]);
 		}
 	}
@@ -43,17 +56,21 @@ AItemParentClass* UInventory::ReturnCurrentItem() {
 }
 
 void UInventory::AddToInventory(AItemParentClass* ItemToAdd) {
-	for (int32 i = 0; i != Inventory.Num(); i++) {
+	for (int32 i = 0; i != Inventory.Num(); i++) {	//Finds the next empty spot in inventory, and places it there.
 		if (Inventory[i] == nullptr) {
-			Inventory.Insert(ItemToAdd, i);
-			CurrentItemIndex = i;
+			Inventory[i] = ItemToAdd;
+			ItemToAdd->AttachToActor(Backpack, FAttachmentTransformRules::SnapToTargetNotIncludingScale, ItemToAdd->ReturnDesignatedSocket());
+			//CurrentItemIndex = i; //causes desync between what is in hand vs when something is added
 			break;
 		}
 	}
-	if (Player) {
-		APlayerParentClass* PlayerReference = Cast<APlayerParentClass>(Player);
+	if (isEmpty) {
 		PlayerReference->SetCurrentItem(Inventory[CurrentItemIndex]);
+		isEmpty = false;
 	}
+	float num = static_cast<float>(Inventory.Num());
+	if (GEngine)
+		GEngine->AddOnScreenDebugMessage(-1, 60.0f, FColor::Yellow, FString::Printf(TEXT("%f"), num));
 }
 // Called when the game starts
 void UInventory::BeginPlay()
@@ -64,9 +81,9 @@ void UInventory::BeginPlay()
 
 	if (GetOwner()) {
 		Player = Cast<ACharacter>(GetOwner()); 
+		PlayerReference = Cast<APlayerParentClass>(Player);
 
 		if (Player->GetController()) { 
-
 			APlayerController* Controller = Cast<APlayerController>(Player->GetController());
 			if (AsUMG_Inventory) {
 
@@ -87,7 +104,8 @@ void UInventory::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompo
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-
+	//if (GEngine)
+		//GEngine->AddOnScreenDebugMessage(-1, 60.0f, FColor::Yellow, FString::Printf(TEXT("%p"), PlayerReference->ItemInHand));
 	// ...
 }
 

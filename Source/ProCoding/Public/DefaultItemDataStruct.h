@@ -9,14 +9,16 @@
  * 
  */
 USTRUCT(BlueprintType)
-struct PROCODING_API FDefaultItemDataStruct
+struct PROCODING_API FItemDataStruct
 {
 public:
 	GENERATED_BODY()
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(EditAnywhere)
 	FName Name;
+	UPROPERTY(EditAnywhere)
+	FName BackpackSocketName;
 
-	FDefaultItemDataStruct();
-	~FDefaultItemDataStruct();
+	FItemDataStruct();
+	~FItemDataStruct();
 };

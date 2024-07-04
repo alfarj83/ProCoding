@@ -17,7 +17,9 @@ void AItemParentClass::BeginPlay()
 	Super::BeginPlay();
 	
 }
-
+FName AItemParentClass::ReturnDesignatedSocket() {
+	return ItemData.BackpackSocketName;
+}
 // Called every frame
 void AItemParentClass::Tick(float DeltaTime)
 {

@@ -24,7 +24,10 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UPROPERTY(EditDEfaultsOnly, BlueprintReadWrite, Category = "Item Variables")
-	FDefaultItemDataStruct ItemData;
+	UPROPERTY(EditAnywhere, Category = "Item Variables")
+	FItemDataStruct ItemData;
+	UPROPERTY(BlueprintReadWrite, Category = "Item Variables")
+	bool ItemIsActive = false;
 
+	FName ReturnDesignatedSocket();
 };
