@@ -16,36 +16,15 @@ void APlayerParentClass::BeginPlay()
 	HandMesh = Cast<USkeletalMeshComponent>(FindComponentByTag(USkeletalMeshComponent::StaticClass(), TEXT("HandTag")));
 	BicepMesh = Cast<USkeletalMeshComponent>(FindComponentByTag(USkeletalMeshComponent::StaticClass(), TEXT("BicepTag")));
 	SpringComponent = Cast<USpringArmComponent>(FindComponentByTag(USpringArmComponent::StaticClass(), TEXT("CameraSpring")));
-
 }
 void APlayerParentClass::SetCurrentItem(AItemParentClass* Item) {
 	ItemInHand = Item;
 	ItemInHand->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
-	ItemInHand->AttachToComponent(HandMesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, FName("HandSocket"));
+	if (HandMesh) ItemInHand->AttachToComponent(HandMesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, FName("HandSocket"));
 }
 void APlayerParentClass::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	/*
-	if (HandMesh) {
-		HandSocketLocation = HandMesh->GetSocketLocation("HandSocket");
-		HandSocketRotation = HandMesh->GetSocketRotation("HandSocket");	//THIS IS A FIRST PERSON EXCLUSIVE THING, WONT WORK WITH THIRD PERSON
-			
-		if (ItemInHand) {
-			//ItemInHand->SetActorLocationAndRotation(HandSocketLocation, HandSocketRotation, false, 0, ETeleportType::None);
-		}
-	}
-	if (BicepMesh) {
-		BicepSocketLocation = BicepMesh->GetSocketLocation("BicepSocket");
-		BicepSocketRotation = BicepMesh->GetSocketRotation("BicepSocket");
-
-		if (ItemInHand) {
-
-			//ItemInHand->SetActorLocationAndRotation(BicepSocketLocation, BicepSocketRotation, false, 0, ETeleportType::None);
-
-		}
-	}
-	*/
 }
 // Called to bind functionality to input
 void APlayerParentClass::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)

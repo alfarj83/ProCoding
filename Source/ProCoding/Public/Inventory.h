@@ -27,17 +27,20 @@ protected:
 
 	bool InventoryShowing = false;
 	bool isEmpty = true;
+	bool EmptyHand = true;
 	UUserWidget* InventoryUIInstance;
 	int32 CurrentItemIndex;
 	APlayerParentClass* PlayerReference;
-	ACharacter* Player;
+	
 
 public:	
 	// Called every frame
 
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+	UPROPERTY(BlueprintReadOnly)
 	TArray<AItemParentClass*> Inventory;
-	
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSubclassOf<UUserWidget> AsUMG_Inventory;
 	
@@ -56,11 +59,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	AItemParentClass* ReturnCurrentItem();
 
-	/*
-	UPROPERTY(EditAnywhere, Category = "Inventory Variables")
-	int MaxSize;
-	UPROPERTY(EditAnywhere, Category = "Inventory Variables")
-	bool AllowDuplicates;
-	*/
+	UPROPERTY(BlueprintReadOnly)
+	ACharacter* Player;
+
 
 };

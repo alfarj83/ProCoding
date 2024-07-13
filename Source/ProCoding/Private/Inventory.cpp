@@ -29,25 +29,56 @@ void UInventory::ToggleInventoryMenu() {
 }
 
 void UInventory::ChangeInventoryItem(int32 Key) {
-	if((Inventory.Num() > Key && Key >= 0) && CurrentItemIndex != Key && Inventory[Key]) { //Can be tied to numbers, operated based on array placement [0], [1], etcetera
-		if (Player) {
+
+	if ((Inventory.Num() > Key && Key >= 0)) { //Failsafe is num too high or low for array.
+
+		if (CurrentItemIndex != Key) { //Checks if we are hitting the same key as the one we have equipped.
+
 			//Either it attaches to the backpack, or just gets disabled and is invisible (Only happens when backpack is not added).
-			Inventory[CurrentItemIndex]->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
-			if (Backpack){
-				Inventory[CurrentItemIndex]->AttachToActor(Backpack, FAttachmentTransformRules::SnapToTargetNotIncludingScale, Inventory[CurrentItemIndex]->ReturnDesignatedSocket());
+			//Makes sure the item in our hand is a valid item.
+			if (Inventory[CurrentItemIndex]) { 
+				Inventory[CurrentItemIndex]->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+
+				if (Backpack) {
+					Inventory[CurrentItemIndex]->AttachToActor(Backpack, FAttachmentTransformRules::SnapToTargetNotIncludingScale, Inventory[CurrentItemIndex]->ReturnDesignatedSocket());
+				}
+				Inventory[CurrentItemIndex]->ItemIsActive = false;
+			}
+			//This part makes sure the item we are swapping to is a real item.
+			//If we are swapping to an empty slot, no item, emptyhand becomes true.
+			if (Inventory[Key]) {
+
+				if (GEngine) {
+					GEngine->AddOnScreenDebugMessage(-1, 120.0f, FColor::Yellow, FString::Printf(TEXT("Dog")));
+				}
+				Inventory[Key]->ItemIsActive = true;
+				PlayerReference->SetCurrentItem(Inventory[Key]);
+				EmptyHand = false;
+				CurrentItemIndex = Key;
 			}
 			else {
-				Inventory[CurrentItemIndex]->SetActorTickEnabled(false);	//Disables previous item;
-				Inventory[CurrentItemIndex]->SetActorHiddenInGame(true);
-
-				Inventory[Key]->SetActorTickEnabled(true);	//Re-Enables new item;
-				Inventory[Key]->SetActorHiddenInGame(false);
+				EmptyHand = true;
 			}
-			Inventory[CurrentItemIndex]->ItemIsActive = false;
-			CurrentItemIndex = Key;
-			Inventory[Key]->ItemIsActive = true;
-			PlayerReference->SetCurrentItem(Inventory[Key]);
+
+			if (!EmptyHand) {
+				GEngine->AddOnScreenDebugMessage(-1, 120.0f, FColor::Yellow, FString::Printf(TEXT("Cat")));
+				PlayerReference->SetCurrentItem(Inventory[Key]);
+			}
 		}
+		// Runs if our hand is empty, and our next item is valid.
+		else if (EmptyHand && Inventory[Key]) { 
+			GEngine->AddOnScreenDebugMessage(-1, 120.0f, FColor::Yellow, FString::Printf(TEXT("Frog")));
+			PlayerReference->SetCurrentItem(Inventory[Key]);
+			CurrentItemIndex = 0;
+			EmptyHand = false;
+		}
+		//Hitting same key to un-equip item
+		else if (!EmptyHand) {
+			Inventory[Key]->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+			Inventory[Key]->AttachToActor(Backpack, FAttachmentTransformRules::SnapToTargetNotIncludingScale, Inventory[CurrentItemIndex]->ReturnDesignatedSocket());
+			EmptyHand = true;
+		}
+		
 	}
 }
 
@@ -59,18 +90,10 @@ void UInventory::AddToInventory(AItemParentClass* ItemToAdd) {
 	for (int32 i = 0; i != Inventory.Num(); i++) {	//Finds the next empty spot in inventory, and places it there.
 		if (Inventory[i] == nullptr) {
 			Inventory[i] = ItemToAdd;
-			ItemToAdd->AttachToActor(Backpack, FAttachmentTransformRules::SnapToTargetNotIncludingScale, ItemToAdd->ReturnDesignatedSocket());
-			//CurrentItemIndex = i; //causes desync between what is in hand vs when something is added
+			Inventory[i]->AttachToActor(Backpack, FAttachmentTransformRules::SnapToTargetNotIncludingScale, ItemToAdd->ReturnDesignatedSocket());
 			break;
-		}
+		} 
 	}
-	if (isEmpty) {
-		PlayerReference->SetCurrentItem(Inventory[CurrentItemIndex]);
-		isEmpty = false;
-	}
-	float num = static_cast<float>(Inventory.Num());
-	if (GEngine)
-		GEngine->AddOnScreenDebugMessage(-1, 60.0f, FColor::Yellow, FString::Printf(TEXT("%f"), num));
 }
 // Called when the game starts
 void UInventory::BeginPlay()
@@ -80,11 +103,13 @@ void UInventory::BeginPlay()
 	CurrentItemIndex = 0;
 
 	if (GetOwner()) {
-		Player = Cast<ACharacter>(GetOwner()); 
+		Player = Cast<ACharacter>(GetOwner());
 		PlayerReference = Cast<APlayerParentClass>(Player);
 
-		if (Player->GetController()) { 
-			APlayerController* Controller = Cast<APlayerController>(Player->GetController());
+		if (PlayerReference && Player) {
+
+			APlayerController* Controller = Cast<APlayerController>(GetOwner());
+
 			if (AsUMG_Inventory) {
 
 				if (!InventoryUIInstance) {

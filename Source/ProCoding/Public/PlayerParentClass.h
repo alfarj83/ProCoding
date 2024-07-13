@@ -50,6 +50,5 @@ public:
 
 	UPROPERTY(BlueprintReadOnly)
 	FRotator BicepSocketRotation;
-
 	//Function that allows you to add an item to the array
 };
